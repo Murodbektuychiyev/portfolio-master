@@ -1,0 +1,325 @@
+ <!DOCTYPE html>
+<html lang="uz" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <title>Portfolio Master | Murodbek Developer</title>
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-G4E2DBR2RD"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-G4E2DBR2RD");
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-59VZZ85F");
+    </script>
+    <!-- End Google Tag Manager -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { darkMode: "class" };
+    </script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <style>
+      .rotate-icon {
+        transition: transform 0.6s ease;
+        cursor: pointer;
+        display: inline-block;
+      }
+      .rotate-360 {
+        transform: rotate(360deg);
+      }
+      .rotate--360 {
+        transform: rotate(-360deg);
+      }
+      #mobileMenu a {
+        display: block;
+        padding: 0.75rem 1rem;
+        border-bottom: 1px solid #ddd;
+        color: inherit;
+        text-decoration: none;
+      }
+      #mobileMenu a:hover {
+        background-color: #e0e7ff;
+        color: #3730a3;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-white text-gray-900 dark:bg-gray-900 dark:text-white transition-colors duration-300"
+  >
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-59VZZ85F"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+
+    <!-- Navbar -->
+    <header
+      class="fixed top-0 left-0 w-full bg-white dark:bg-gray-800 shadow z-50"
+    >
+      <div
+        class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center"
+      >
+        <h1
+          class="text-xl md:text-2xl font-bold text-blue-600 dark:text-blue-400"
+        >
+          Portfolio Master
+        </h1>
+        <nav class="hidden md:flex space-x-6 font-medium items-center">
+          <a href="#home" class="hover:text-blue-600">Bosh sahifa</a>
+          <a href="#about" class="hover:text-blue-600">Men haqimda</a>
+          <a href="#skills" class="hover:text-blue-600">Qobiliyatlar</a>
+          <a href="#projects" class="hover:text-blue-600">Loyihalar</a>
+          <a href="#contact" class="hover:text-blue-600">Aloqa</a>
+          <button
+            id="themeToggle"
+            aria-label="Toggle Dark Mode"
+            class="ml-4 text-2xl p-1"
+          >
+            <span id="themeIcon" class="rotate-icon">🌙</span>
+          </button>
+        </nav>
+        <button id="hamburger" class="md:hidden text-3xl" aria-label="Menyu">
+          ☰
+        </button>
+      </div>
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden bg-white dark:bg-gray-800 px-4 pb-4"
+      >
+        <a href="#home" onclick="closeMenu()">Bosh sahifa</a>
+        <a href="#about" onclick="closeMenu()">Men haqimda</a>
+        <a href="#skills" onclick="closeMenu()">Qobiliyatlar</a>
+        <a href="#projects" onclick="closeMenu()">Loyihalar</a>
+        <a href="#contact" onclick="closeMenu()">Aloqa</a>
+        <button
+          id="themeToggleMobile"
+          aria-label="Toggle Dark Mode"
+          class="text-2xl mt-2"
+        >
+          <span id="themeIconMobile" class="rotate-icon">🌙</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section
+      id="home"
+      class="pt-28 pb-16 text-center bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4"
+      data-aos="fade-up"
+    >
+      <h2 class="text-4xl font-bold mb-4">
+        Assalomu alaykum! Men
+        <span class="text-yellow-300">Murodbek Developer</span>
+      </h2>
+      <p class="text-xl max-w-xl mx-auto">
+        Kelajakdagi master dasturchi — HTML, CSS, JS va Python yo'nalishida
+        o'qimoqdaman
+      </p>
+    </section>
+    <!-- About -->
+    <section
+      id="about"
+      class="py-16 px-4 bg-white dark:bg-gray-900"
+      data-aos="fade-right"
+    >
+      <div class="max-w-4xl mx-auto text-center">
+        <h3 class="text-3xl font-bold mb-6">Men haqimda</h3>
+        <p class="text-lg leading-relaxed">
+          Men Tuychiyev Murodbekman. Koson tumanidanman. Axborot texnologiyalari
+          sohasiga ishtiyoqim kuchli. Python, HTML, CSS, JS o'rganmoqdaman.
+          Hozirda Portfolio Master ustida ishlayapman.
+        </p>
+      </div>
+    </section>
+    <!-- Skills -->
+    <section id="skills" class="py-16 px-4 bg-gray-100 dark:bg-gray-800">
+      <div class="max-w-5xl mx-auto text-center">
+        <h3 class="text-3xl font-bold mb-10">Qobiliyatlarim</h3>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+          <div
+            class="bg-white dark:bg-gray-700 p-4 rounded-lg shadow hover:scale-105 transition-transform"
+          >
+            Python
+          </div>
+          <div
+            class="bg-white dark:bg-gray-700 p-4 rounded-lg shadow hover:scale-105 transition-transform"
+          >
+            HTML5
+          </div>
+          <div
+            class="bg-white dark:bg-gray-700 p-4 rounded-lg shadow hover:scale-105 transition-transform"
+          >
+            CSS3
+          </div>
+          <div
+            class="bg-white dark:bg-gray-700 p-4 rounded-lg shadow hover:scale-105 transition-transform"
+          >
+            JavaScript
+          </div>
+          <div
+            class="bg-white dark:bg-gray-700 p-4 rounded-lg shadow hover:scale-105 transition-transform"
+          >
+            Ingliz tili
+          </div>
+          <div
+            class="bg-white dark:bg-gray-700 p-4 rounded-lg shadow hover:scale-105 transition-transform"
+          >
+            Matematika
+          </div>
+          <div
+            class="bg-white dark:bg-gray-700 p-4 rounded-lg shadow hover:scale-105 transition-transform"
+          >
+            GitHub
+          </div>
+          <div
+            class="bg-white dark:bg-gray-700 p-4 rounded-lg shadow hover:scale-105 transition-transform"
+          >
+            Kiberxavfsizlik
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section
+      id="projects"
+      class="py-16 px-4 bg-white dark:bg-gray-900"
+      data-aos="fade-up"
+    >
+      <div class="max-w-5xl mx-auto text-center">
+        <h3 class="text-3xl font-bold mb-10">Loyihalarim</h3>
+        <div class="grid gap-6 md:grid-cols-2">
+          <div
+            class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition-shadow"
+          >
+            <h4 class="text-xl font-bold mb-2">Portfolio Websayt</h4>
+            <p>HTML, Tailwind va JavaScript asosida yaratilgan portfolio.</p>
+          </div>
+          <div
+            class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition-shadow"
+          >
+            <h4 class="text-xl font-bold mb-2">To-do App (Python)</h4>
+            <p>CLI orqali ishlaydigan vazifalar boshqaruv tizimi.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section
+      id="contact"
+      class="py-16 px-4 bg-gray-100 dark:bg-gray-800"
+      data-aos="fade-up"
+    >
+      <div class="max-w-2xl mx-auto text-center">
+        <h3 class="text-3xl font-bold mb-6">Aloqa</h3>
+        <p>
+          Email:
+          <a
+            href="mailto:murodbek@example.com"
+            class="text-blue-600 dark:text-blue-400 hover:underline"
+            >murodbek@example.com</a
+          >
+        </p>
+        <p class="mt-2">
+          Telegram:
+          <a
+            href="https://t.me/murodbekdev"
+            class="text-blue-600 dark:text-blue-400 hover:underline"
+            >@murodbekdev</a
+          >
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      class="text-center py-4 bg-white dark:bg-gray-900 border-t dark:border-gray-700"
+    >
+      <p>
+        &copy; 2025 Portfolio Master. Made with ❤️ by Murodbek Developer. |
+        Resolution: <span id="resolution"></span>
+      </p>
+    </footer>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      hamburger.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      function closeMenu() {
+        mobileMenu.classList.add("hidden");
+      }
+
+      const themeToggle = document.getElementById("themeToggle");
+      const themeToggleMobile = document.getElementById("themeToggleMobile");
+      const themeIcon = document.getElementById("themeIcon");
+      const themeIconMobile = document.getElementById("themeIconMobile");
+
+      function toggleTheme(icon) {
+        const html = document.documentElement;
+        const isDark = html.classList.contains("dark");
+        html.classList.toggle("dark");
+
+        icon.classList.add(isDark ? "rotate--360" : "rotate-360");
+        icon.classList.remove(isDark ? "rotate-360" : "rotate--360");
+
+        setTimeout(() => {
+          icon.classList.remove("rotate-360", "rotate--360");
+          icon.textContent = isDark ? "🌙" : "☀️";
+        }, 600);
+      }
+
+      themeToggle.addEventListener("click", () => toggleTheme(themeIcon));
+      themeToggleMobile.addEventListener("click", () =>
+        toggleTheme(themeIconMobile)
+      );
+      
+
+      // Ekran o'lchami ko'rsatkich
+      const res = document.getElementById("resolution");
+      function updateResolution() {
+        res.textContent = `${window.innerWidth}${window.innerHeight}`;
+      }
+      window.addEventListener("resize", updateResolution);
+      window.addEventListener("load", updateResolution);
+    </script>
+  </body>
+</html>
